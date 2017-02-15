@@ -38,13 +38,6 @@ body {
     font-size: 200px;
 }
 
-@media screen and (max-width: 768px) {
-    .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
-    }
-}
-
 .logo-small {
     color: #047a04;
     font-size: 50px;
@@ -171,6 +164,17 @@ h4 {
     -webkit-animation-duration: 1s;
     /* Make the element visible */
     visibility: visible; 
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    body {
+      padding:30;
+    }
 }
 
 /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
@@ -402,7 +406,7 @@ h4 {
   <div class="row slideanim">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Cumming, GA</p>
       <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> 
     </div>
