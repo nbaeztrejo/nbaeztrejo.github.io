@@ -129,8 +129,6 @@ body {
     color: #fff !important;
     line-height: 50px;
     font-size: 16px;
-    padding-right: 0px;
-
   }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
@@ -140,8 +138,15 @@ body {
 
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
+    color: #fff;
 }
+
+.navbar-default .navbar-collapse{
+    box-shadow: none;
+}
+
+.highlight {background:#ddd}
+
 
 footer .glyphicon {
     font-size: 20px;
@@ -209,8 +214,9 @@ h4 {
     }
 
     .navbar{
-      height: 55px;
+      height: 60px;
     }
+
 
     .navbar li a {
     line-height: 40px;
@@ -598,6 +604,17 @@ $(document).ready(function(){
   });
 
 })
+</script>
+
+<script>
+$('.navbar-toggle').click(function() {
+      $(this).toggleClass('highlight').blur();
+});
+
+if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+     $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
+     CloseNav();
+}
 </script>
 
   </body>
