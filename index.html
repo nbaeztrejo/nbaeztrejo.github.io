@@ -186,9 +186,15 @@ h4 {
       width: 100%; /* Set width to 100% */
       margin: auto;
   }
-  .carousel-caption h3 {
+
+.carousel-caption{
+      padding-top: -10px;
+}
+
+.carousel-caption h3 {
       color: #fff !important;
-  }
+      font-size: 28px;
+}
 
 
 
@@ -319,7 +325,7 @@ h4 {
       <div class="item" >
         <img id="pic3" src="house3.jpg" alt="Los Angeles" width="1200" height="600">
         <div class="carousel-caption">
-          <h3>Detail oriented</h3>
+          <h3>Detail Oriented</h3>
           <p></p>
         </div>      
       </div>
@@ -593,6 +599,13 @@ $(document).ready(function(){
       window.location.hash = hash;
       });
     } // End if
+
+  });
+
+  $(".navbar a").on('click', function(event) {
+
+    $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
+
   });
 
 
@@ -624,6 +637,7 @@ if (_opened === true && !clickover.hasClass("navbar-toggle")) {
 <script>
   $(document).on('click',function(){
       $('.collapse').collapse('hide');
+
   });
 
 </script>
@@ -640,6 +654,15 @@ $(document).ready(function() {
 
 
     } 
+
+    if ($(window).width() > 768){
+      $("#pic1").attr('src','house-back.jpg');
+      $("#pic2").attr('src','pine2.jpg');
+      $("#pic3").attr('src','house3.jpg');
+
+
+    } 
+
   }
 
   imageresize();//Activates when document first loads    
