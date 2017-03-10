@@ -189,15 +189,10 @@ h4 {
   .carousel-caption h3 {
       color: #fff !important;
   }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
+
 
 
 @media screen and (max-width: 768px) {
-
 
     .col-sm-4 {
         text-align: center;
@@ -219,6 +214,7 @@ h4 {
     .navbar{
       height: 60px;
     }
+
 
     .navbar-nav li a:hover, .navbar-nav li.active a {
     /*text-shadow: 0px 0px 5px white; */
@@ -305,23 +301,23 @@ h4 {
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="house-back.jpg" alt="New York" width="1200" height="600">
+        <img id="pic1" src="house-back.jpg" width="1200" height="600">
         <div class="carousel-caption">
           <h3>Expert Care</h3>
           <p></p>
         </div>      
       </div>
 
-      <div class="item">
-        <img src="pine2.jpg" class="img-fluid" alt="Chicago" width="1200" height="600">
+      <div class="item" >
+        <img id="pic2" src="pine2.jpg" width="1200" height="600">
         <div class="carousel-caption">
           <h3>Quality</h3>
           <p></p>
         </div>      
       </div>
     
-      <div class="item">
-        <img src="house3.jpg" class="img-fluid" alt="Los Angeles" width="1200" height="600">
+      <div class="item" >
+        <img id="pic3" src="house3.jpg" alt="Los Angeles" width="1200" height="600">
         <div class="carousel-caption">
           <h3>Detail oriented</h3>
           <p></p>
@@ -611,7 +607,7 @@ $(document).ready(function(){
     });
   });
 
-})
+});
 </script>
 
 <script>
@@ -627,10 +623,35 @@ if (_opened === true && !clickover.hasClass("navbar-toggle")) {
 
 <script>
   $(document).on('click',function(){
-  $('.collapse').collapse('hide');
-})
+      $('.collapse').collapse('hide');
+  });
 
 </script>
+
+
+<script>
+$(document).ready(function() {
+
+   function imageresize() {
+    if ($(window).width() < 768){
+      $("#pic1").attr('src','house-back_mobile.jpg');
+      $("#pic2").attr('src','pine2_mobile.jpg');
+      $("#pic3").attr('src','house3_mobile.jpg');
+
+
+    } 
+  }
+
+  imageresize();//Activates when document first loads    
+
+   $(window).bind("resize", function(){
+        imageresize();
+   });
+
+ });
+
+</script>
+
 
   </body>
 </html>
