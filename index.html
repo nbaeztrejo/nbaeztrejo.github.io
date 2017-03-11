@@ -199,7 +199,7 @@ h4 {
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 
     .navbar{
       height: 60px;
@@ -686,19 +686,24 @@ if (_opened === true && !clickover.hasClass("navbar-toggle")) {
 $(document).ready(function() {
 
    function imageresize() {
-    if ($(window).width() < 768){
+    if ($(window).width() < 480){
       $("#pic1").attr('src','house-back_mobile.jpg');
       $("#pic2").attr('src','pine2_mobile.jpg');
       $("#pic3").attr('src','house3_mobile.jpg');
+    } 
 
 
+
+    if ($(window).width() > 480 && $(window).width() < 768){
+      $("#pic1").attr('src','house-back_ipad.jpg');
+      $("#pic2").attr('src','pine2_ipad.jpg');
+      $("#pic3").attr('src','house3_ipad.jpg');
     } 
 
     if ($(window).width() > 768){
       $("#pic1").attr('src','house-back.jpg');
       $("#pic2").attr('src','pine2.jpg');
       $("#pic3").attr('src','house3.jpg');
-
 
     } 
 
