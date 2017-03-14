@@ -205,6 +205,15 @@ h4 {
       height: 60px;
     }
 
+    #logo{
+      height: 50px;
+    }
+
+    .navbar-left{
+      padding-left: 5px;
+    }
+
+
     .container{
       width: 100%;
     }
@@ -321,14 +330,16 @@ h4 {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#">Pinestraw King</a>
+      <a class="navbar-left" href="#">
+        <img id="logo" src="pinelogo.png">
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#locations">Locations</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -449,34 +460,6 @@ h4 {
   </div>
 </div>
 
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div id="pricing" class="container-fluid">
   <div class="text-center">
     <h2>Pricing</h2>
@@ -543,13 +526,47 @@ h4 {
   </div>
 </div>
 
+<div id="locations" class="container-fluid text-center bg-grey">
+  <h2>Locations</h2>
+  <h4>Areas we serve</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="paris.jpg" alt="Paris">
+        <p><strong>Paris</strong></p>
+        <p>Yes, we built Paris</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="newyork.jpg" alt="New York">
+        <p><strong>New York</strong></p>
+        <p>We built New York</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sanfran.jpg" alt="San Francisco">
+        <p><strong>San Francisco</strong></p>
+        <p>Yes, San Fran is ours</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="googleMap" style="height:400px;width:100%;"></div>
+    </div>
+  </div>
+</div>
+
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Cumming, GA</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+1-800-555-5555"> +00 1515151515</a></p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
     <div class="col-sm-7 slideanim">
@@ -571,15 +588,6 @@ h4 {
   </div>
 </div>
 
-<!-- Set height and width with CSS -->
-<div class="container-fluid">
-  <h2 class="text-center">Where we are</h2>
-  <div class="row slideanim">
-    <div class="col-sm-12">
-      <div id="googleMap" style="height:400px;width:100%;"></div>
-    </div>
-  </div>
-</div>
 
 <!-- Add Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA-mQSx0jc52NoDm-zfLEvdxc0rkAuEoKY"></script>
