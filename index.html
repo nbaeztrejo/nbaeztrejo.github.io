@@ -197,6 +197,40 @@ h4 {
 }
 
 
+@media screen and (min-width: 1920px) {
+    .panel{
+      width: 70%;
+      margin-left: 250px;    }
+
+    .col-sm-4 {
+        padding-left: 100px;
+    }
+
+    #aboutpic{
+        height: 350px;
+
+    }
+
+    .col-md-8{
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    .col-md-5{
+      padding-left: 150px;
+      text-align: center;
+    }
+
+    .col-md-7{
+      padding-right: 150px;
+    }
+
+    .col-sm-12 {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -229,6 +263,7 @@ h4 {
     font-size: 24px;
 
   }
+
 
 }
 
@@ -290,6 +325,7 @@ h4 {
 }
 
 @media screen and (max-width: 480px) {
+
     .logo{
         font-size: 150px;
     }
@@ -394,9 +430,10 @@ h4 {
 <div id="about" class="container-fluid text-center">
   <div class="row slideanim">
     <div class="col-sm-4">
-       <img id="about" src="wheelbarrow.jpg" height="300">
+       <img class="center-block" id="aboutpic" src="wheelbarrow.jpg" height="300">
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-7 col-md-8">
       <h2>About</h2>
       <h4>Trust. Honesty. Loyalty</h4> 
       <p>At Pinestraw King we strive to earn the trust of north Georgia homeowners by providing consistent high quality pine straw spreading and installations. With years of landscaping experience, there is no house too big or too demanding for us to handle. Our purpose is to give you the satisfaction you deserve at a fraction of the price. </p>
@@ -430,29 +467,31 @@ h4 {
   </div>
 </div>
 
-<div id="locations" class="container-fluid text-center bg-grey">
-  <h2>Locations</h2>
-  <h4>Areas we serve</h4>
+<div id="locations" class="container-fluid text-center">
   <div class="row text-center slideanim">
-    <div class="col-sm-4">
-       <img id="locpic" src="house.jpg" height="300">
+    <div class="col-sm-6 col-md-4">
+       <img class="center-block" id="locpic" src="dock.jpg" height="300">
     </div>
-    <div class="col-sm-4">
-       <ul class="list-unstyled">
-        <li>Cumming</li>
-        <li>Buford</li>
-        <li>Duluth</li>
-        <li>Suwanee</li>
-        <li>Johns Creek</li>
-      </ul>
-    </div>
-    <div class="col-sm-4">
-       <ul class="list-unstyled">
-        <li>Forsyth County</li>
-        <li>Hall County</li>
-        <li>Gwinnett County</li>
-        <li>Fulton County</li>
-      </ul>
+    <div class="col-sm-6 col-md-8">
+    <h2>Locations</h2>
+    <h4>Areas we serve</h4>
+      <div class="col-md-6">
+         <ul class="list-unstyled">
+          <li>Cumming</li>
+          <li>Buford</li>
+          <li>Duluth</li>
+          <li>Suwanee</li>
+          <li>Johns Creek</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+         <ul class="list-unstyled">
+          <li>Forsyth County</li>
+          <li>Hall County</li>
+          <li>Gwinnett County</li>
+          <li>North Fulton County</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -468,24 +507,24 @@ h4 {
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
-    <div class="col-sm-5">
+    <div class="col-md-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Cumming, GA</p>
       <p><span class="glyphicon glyphicon-phone"></span> <a href="tel:+1-800-555-5555"> +00 1515151515</a></p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <p><span class="glyphicon glyphicon-envelope"><a href="mailto:myemail@something.com"></span> myemail@something.com</p>
     </div>
-    <div class="col-sm-7 slideanim">
+    <div class="col-md-7 slideanim">
       <div class="row">
-        <div class="col-sm-6 form-group">
+        <div class="col-md-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
-        <div class="col-sm-6 form-group">
+        <div class="col-md-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
-        <div class="col-sm-12 form-group">
+        <div class="col-xs-12 col-md-12 form-group">
           <button class="btn btn-default pull-right" type="submit">Send</button>
         </div>
       </div>
@@ -603,17 +642,22 @@ $(document).ready(function() {
       $("#pic1").attr('src','house-back_mobile.jpg');
       $("#pic2").attr('src','pine2_mobile.jpg');
       $("#pic3").attr('src','house3_mobile.jpg');
+      $("#serpic").attr('src','pine-shoes-mobile.jpg');
+      $("#locpic").attr('src','dock_mobile.jpg');
+
     } 
 
 
 
-    if ($(window).width() > 480 && $(window).width() < 769){
+    if ($(window).width() > 480 && $(window).width() < 780){
       $("#pic1").attr('src','house-back_ipad.jpg');
       $("#pic2").attr('src','pine2_ipad.jpg');
       $("#pic3").attr('src','house3_ipad.jpg');
+      $("#serpic").attr('src','pine-shoes-mobile.jpg');
+      $("#locpic").attr('src','dock_mobile.jpg');
     } 
 
-    if ($(window).width() > 768){
+    if ($(window).width() > 779){
       $("#pic1").attr('src','house-back.jpg');
       $("#pic2").attr('src','pine2.jpg');
       $("#pic3").attr('src','house3.jpg');
