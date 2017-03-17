@@ -42,25 +42,6 @@ $(document).ready(function(){
     });
   });
 
-});
-
-$('.navbar-toggle').click(function() {
-      $(this).toggleClass('highlight').blur();
-});
-
-if (_opened === true && !clickover.hasClass("navbar-toggle")) {
-     $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
-     CloseNav();
-}
-
-
-$(document).on('click',function(){
-      $('.collapse').collapse('hide');
-
-  });
-
-$(document).ready(function() {
-
    function imageresize() {
     if ($(window).width() < 480){
       $("#pic1").attr('src','house-back_mobile.jpg');
@@ -70,7 +51,6 @@ $(document).ready(function() {
       $("#locpic").attr('src','dock_mobile.jpg');
 
     } 
-
 
 
     if ($(window).width() > 480 && $(window).width() < 769){
@@ -99,5 +79,23 @@ $(document).ready(function() {
         imageresize();
    });
 
- });
+
+
+
+});
+
+$('.navbar-toggle').click(function() {
+      $(this).toggleClass('highlight').blur();
+});
+
+if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+     $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
+     CloseNav();
+}
+
+
+$(document).on('click',function(){
+      $('.collapse').collapse('hide');
+
+  });
 
