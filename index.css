@@ -101,7 +101,7 @@ body {
     font-family: Montserrat, sans-serif;
     background-color: #024002;
     z-index: 9999;
-    border: 0;
+    border: none;
     line-height: 1.42857143;
     letter-spacing: 4px;
     border-radius: 0;
@@ -133,11 +133,20 @@ body {
     color: #fff;
 }
 
+.navbar-toggle{
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
 .navbar-default .navbar-collapse{
+    border: none;
     box-shadow: none;
 }
 
-.highlight {background:#ddd}
+
+.highlight {
+    background:#ddd;
+}
 
 
 footer .glyphicon {

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function() {
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
@@ -26,8 +26,14 @@ $(document).ready(function(){
 
   $(".navbar a").on('click', function(event) {
 
-    $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
+    $('.navbar-toggle').toggleClass('highlight');
+    $('.collapse').collapse('hide');
+ /**Add This**/
 
+  });
+
+  $('.navbar-toggle').click(function() {
+      $(this).toggleClass('highlight');
   });
 
 
@@ -42,36 +48,36 @@ $(document).ready(function(){
     });
   });
 
-   function imageresize() {
+  function imageresize() {
     if ($(window).width() < 480){
-      $("#pic1").attr('src','house-back_mobile.jpg');
-      $("#pic2").attr('src','pine2_mobile.jpg');
-      $("#pic3").attr('src','house3_mobile.jpg');
-      $("#serpic").attr('src','pine-shoes-mobile.jpg');
-      $("#locpic").attr('src','dock_mobile.jpg');
+      $("#pic1").attr('src','images/house-back_mobile.jpg');
+      $("#pic2").attr('src','images/pine2_mobile.jpg');
+      $("#pic3").attr('src','images/house3_mobile.jpg');
+      $("#serpic").attr('src','images/pine-shoes-mobile.jpg');
+      $("#locpic").attr('src','images/dock_mobile.jpg');
 
     } 
 
 
     if ($(window).width() > 480 && $(window).width() < 769){
-      $("#pic1").attr('src','house-back_ipad.jpg');
-      $("#pic2").attr('src','pine2_ipad.jpg');
-      $("#pic3").attr('src','house3_ipad.jpg');
+      $("#pic1").attr('src','images/house-back_ipad.jpg');
+      $("#pic2").attr('src','images/pine2_ipad.jpg');
+      $("#pic3").attr('src','images/house3_ipad.jpg');
     } 
 
     if ($(window).width() > 768){
-      $("#pic1").attr('src','house-back.jpg');
-      $("#pic2").attr('src','pine2.jpg');
-      $("#pic3").attr('src','house3.jpg');
+      $("#pic1").attr('src','images/house-back.jpg');
+      $("#pic2").attr('src','images/pine2.jpg');
+      $("#pic3").attr('src','images/house3.jpg');
 
     } 
 
     if ($(window).width() > 480 && $(window).width() < 1025){
-      $("#serpic").attr('src','pine-shoes-mobile.jpg');
-      $("#locpic").attr('src','dock_mobile.jpg');
+      $("#serpic").attr('src','images/pine-shoes-mobile.jpg');
+      $("#locpic").attr('src','images/dock_mobile.jpg');
     } 
 
-  }
+  };
 
   imageresize();//Activates when document first loads    
 
@@ -79,23 +85,21 @@ $(document).ready(function(){
         imageresize();
    });
 
-
-
-
 });
 
-$('.navbar-toggle').click(function() {
-      $(this).toggleClass('highlight').blur();
-});
 
-if (_opened === true && !clickover.hasClass("navbar-toggle")) {
-     $('.navbar-toggle').toggleClass('highlight'); /**Add This**/
-     CloseNav();
-}
+  function CloseNav() {
+            var clickover = $(event.target);
+            var _opened = $(".navbar-collapse").hasClass("in");
+            if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+                 $('.navbar-toggle').toggleClass('highlight');
+                 $(".navbar-collapse").collapse('hide');
+
+            }
+        }
 
 
 $(document).on('click',function(){
-      $('.collapse').collapse('hide');
-
-  });
+      CloseNav();
+      });
 
