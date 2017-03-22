@@ -1,7 +1,4 @@
 # nbaeztrejo.github.io
-November
+Pinestraw King
 
-
-Please see working version at novembertrejo.tumblr.com
-
-Thank you
+Testing site for responsive business site
